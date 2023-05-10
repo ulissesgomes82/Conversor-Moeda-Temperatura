@@ -18,7 +18,12 @@ public class Moeda {
 	public static void convert(Object typeConvert, Double valor) {
 
 		double resultConvertion = 0.0;
-
+		if (valor.equals(null)) {
+			throw new NullPointerException("Value is null!");
+		}
+		if (valor.equals(0.0)) {
+			throw new NullPointerException("Value is 0.0!");
+		}
 		switch (typeConvert.toString()) {
 		case "De Reais a Dólares":
 			resultConvertion = valor * realDolar;
